@@ -7,14 +7,48 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>GIR-NET</h1>
+    <header>
+      <h1>GIR-NET</h1>
+    </header>
+    <div id="movies">
+      <h2>Movies</h2>
+      <a href="">https://movies.gir-net.com</a>
+    </div>
+    <div id="games">
+      <h2>Games</h2>
+      <a href="">https://games.gir-net.com</a>
+    </div>
+    <div id="center"></div>
+    <div id="quick-links">
+      <!-- <a href="https://google.com">Google</a> -->
+    </div>
   </body>
 </html>
 <style>
   body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Courier New", Courier, monospace;
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "left center right"
+      "ql ql ql";
+  }
+  header {
+    grid-area: header;
+    text-align: center;
+  }
+  #movies {
+    grid-area: right;
+    text-align: center;
+  }
+  #games {
+    grid-area: left;
+    text-align: center;
+  }
+  #center {
+    grid-area: center;
+  }
+  #quick-links {
+    grid-area: ql;
   }
 </style>
